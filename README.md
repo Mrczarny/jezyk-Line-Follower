@@ -1,130 +1,50 @@
-<!--
-*** Readme created using https://github.com/othneildrew/Best-README-Template 
--->
+# Line Follower
 
+Line Follower is one of the specialized robots for RelayBot project. The code that controls this robot is written in C++ programming language for Arduino Nano, using PlatformIO in Visual Studio Code.
 
+## Table of Contents
+- Requirements
+- Installation
+- Configuration
+- How It Works
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+## Requirements
+- [Visual Studio Code](https://code.visualstudio.com/download)
+- [PlatformIO](https://platformio.org/install/ide?install=vscode)
+- Arduino Nano AT MEGA 328 
+- Integral Neopixle LED’s 
+- Rotation Sensors (LM393 Opto-Interrupter) 
+- InfraRed Line Sensors 
+- Sonar Sensor (HCSR04) 
+- 2 Motors 
+- Bread-Board
+- PCB “Back-Bone” 
+- Servo Motor with Integral “Gripper” 
+- Bluetooth Wireless Serial Module 
+- Power Bank 
+- USB Cable 
+- H bridge Motor Driver 
+- 3 Onboard Push-Buttons 
+- 2 Switches 
+- Red, Yellow, Green LED’s
+- Robot04 Chasis 
 
+## Installation
+- Download Zip file from Github
+- Open the folder in Visual Studio Code
 
+## Configuration
+- Turn the switches on Arduino Nano off
+- Connect Arduino Nano to PC using USB cable
+- Verify the port is correctly chosen
+- Compile and upload the code
+- Reset Arduino Nano
 
+## How It Works
+The main system contains an IR sensor, which is used for detecting and following the line. The robot waits until it is placed on starting position. Then it moves forward until a deviation is detected. There are four possibilities here.
+- If the end position is detected, the robot moves to end position, and the search ends.
+- If the line's direction changes, and there is only one way, the robot turns in correct way, saves the turn to path, moves forward, and checks for another deviation. If there are multiple ways, the robot eliminates paths that were already taken. If a new path is available at this point, the rest is the same as one way. If there are no available paths, the robot checks if there are other paths available on previous points, and the rest is the same as one way. If no other path exists, the search ends.
+- If the line ends and other paths exist, the robot saves the path, turns 180 degrees, moves forward, and checks for another deviation.
+- If an object is detected, the robot goes around the object, moves forward, and checks for another deviation.
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-
-
-### Built With
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-### Prerequisites
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/Mrczarny/jezyk-Line-Follower/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Jan Adamski - adamski.jj@gmail.com
-
-Project Link: [https://github.com/Mrczarny/jezyk-Line-Follower](https://github.com/Mrczarny/jezyk-Line-Follower)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Mrczarny/jezyk-Line-Follower?style=for-the-badge
-[contributors-url]: https://github.com/Mrczarny/jezyk-Line-Follower/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Mrczarny/jezyk-Line-Follower?style=for-the-badge
-[forks-url]: https://github.com/Mrczarny/jezyk-Line-Follower/network/members
-[stars-shield]: https://img.shields.io/github/stars/Mrczarny/jezyk-Line-Follower?style=for-the-badge
-[stars-url]: https://github.com/Mrczarny/jezyk-Line-Follower/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Mrczarny/jezyk-Line-Follower?style=for-the-badge
-[issues-url]: https://github.com/Mrczarny/jezyk-Line-Follower/issues
-[license-shield]: https://img.shields.io/github/license/Mrczarny/jezyk-Line-Follower?style=for-the-badge
-[license-url]: https://github.com/Mrczarny/jezyk-Line-Follower/blob/master/LICENSE.txt
+![use case](image.png)

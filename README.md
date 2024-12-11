@@ -7,6 +7,11 @@ Line Follower is one of the specialized robots for RelayBot project. The code th
 - Installation
 - Configuration
 - How It Works
+- Roadmap
+- Contributing
+- License
+- Contact
+- Acknowledgements
 
 ## Requirements
 - [Visual Studio Code](https://code.visualstudio.com/download)
@@ -48,3 +53,35 @@ The main system contains an IR sensor, which is used for detecting and following
 - If an object is detected, the robot goes around the object, moves forward, and checks for another deviation.
 
 ![use case](image.png)
+
+## Roadmap
+See the [open issues](https://github.com/Mrczarny/jezyk-Line-Follower/issues) for a list of proposed features (and known issues).
+
+## Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+## License
+Distributed under the MIT License. See LICENSE for more information.
+
+## Contact
+Jan Adamski - adamski.jj@gmail.com
+
+Project Link: https://github.com/Mrczarny/jezyk-Line-Follower
+
+## Acknowledgements
+- [GitHub Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
+- [Img Shields](https://shields.io)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Pages](https://pages.github.com)
+- [Animate.css](https://animate.style)
+- [Loaders.css](https://connoratherton.com/loaders)
+- [Slick Carousel](https://kenwheeler.github.io/slick/)
+- [Sticky Kit](https://leafo.net/sticky-kit/)
+- [JVectorMap](https://kinkybootsthemusical.com)
+- [Font Awesome](https://fontawesome.com)
